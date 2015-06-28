@@ -1,0 +1,28 @@
+#Tournament Results#
+##
+
+## Introduction
+
+In this project a Swiss-system tournament was created with SQL tables and queries.
+
+###Files Used
+
+
+- tournament.py - provides the Swiss Tournament
+- tournament.sql - defines the tables for the tournament
+- tournament.test.py - test cases for the tournament
+
+### Vagrant Usage
+Utilize vagrant to create the database tournament
+
+### Run the Program
+
+Here are the steps to run this program.
+
+    Step 1: use the SQL schema from tournament.sql
+	Step 2: Old matches and records can be dropped/deleted
+	Step 3: Register and delete players as desired
+	Step 4: Run the tournament
+
+###Tests Run
+All tests that were ran were successful.
