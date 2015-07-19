@@ -85,12 +85,8 @@ def reportMatch(winner, loser):
     """
     db = connect()
     c = db.cursor()
-    if draw:
-        c.execute("INSERT INTO Matches (player, opponent, result) VALUES (%s, %s, 1)", (winner, loser))
-        c.execute("INSERT INTO Matches (player, opponent, result) VALUES (%s, %s, 1)", (loser, winner))
-    else:
-        c.execute("INSERT INTO Matches (player, opponent, result) VALUES (%s, %s, 1)", (winner, loser))
-        c.execute("INSERT INTO Matches (player, opponent, result) VALUES (%s, %s, 0)", (loser, winner))
+    c.execute("INSERT INTO Matches (player, opponent, result) VALUES (%s, %s, 1)", (winner, loser))
+    c.execute("INSERT INTO Matches (player, opponent, result) VALUES (%s, %s, 0)", (loser, winner))
     db.commit()
     db.close()
 
